@@ -59,3 +59,200 @@
 
     transform: scale(50%);
 }
+
+/* filters------------------------------- */
+
+.ex-6-img:hover {
+    filter: grayscale();
+
+}
+
+.ex-7-img {
+    transition: filter 2s;
+}
+
+.ex-7-img:hover {
+    filter: sepia();
+
+}
+
+.ex-8-img {
+    transition: border-radius 3s, filter 3s;
+}
+
+.ex-8-img:hover {
+    border-radius: 20px;
+    filter: blur(0.5px) saturate(0)
+}
+
+.ex-9-img {
+    position: relative;
+    transition: border-radius 3s, filter 3s, transform 3s, left 3s;
+}
+
+.ex-9-img:hover {
+    transform: scale(150%);
+
+    border-radius: 20px;
+    filter: saturate(0)
+}
+
+/* animation--------------------- */
+
+
+@keyframes rotation1 {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.ex-10-icon {
+    animation: rotation1 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes rotation2 {
+    0% {
+        transform: rotate(0);
+    }
+
+    75% {
+        transform: rotate(270deg);
+    }
+
+    100% {
+        transform: rotate(-270deg)
+    }
+}
+
+.ex-11-icon:hover {
+    animation: rotation2 2.5s;
+    animation-timing-function: linear;
+}
+
+
+
+
+@keyframes translate1 {
+
+    0%,
+    100% {
+        transform: translateX()(0);
+    }
+
+    50% {
+        transform: translateX(115px);
+    }
+
+}
+
+@keyframes translate2 {
+
+    0%,
+    100% {
+        transform: translateX()(0);
+    }
+
+    50% {
+        transform: translateX(-95px);
+    }
+
+}
+
+a.ex-12-button:hover .ex-12-top-white {
+
+    animation: translate1 2s;
+    animation-timing-function: linear;
+
+}
+
+a.ex-12-button:hover .ex-12-bottom-white {
+
+    animation: translate2 2s;
+    animation-direction: inherit;
+    animation-timing-function: linear;
+}
+
+
+
+
+@keyframes turn1 {
+
+    0% {
+        transform: translate(0, 0);
+
+    }
+
+    20% {
+        transform: translate(150px, 0);
+
+    }
+
+    40% {
+        transform: translate(150px, 70px);
+
+    }
+
+    60% {
+        transform: translate(-50px, 70px);
+
+    }
+
+    80% {
+        transform: translate(-50px, 0);
+    }
+
+    100% {transform: translate(0px, 0);
+    }
+}
+
+@keyframes turn2 {
+
+    0% {
+        transform: translate(0, 0);
+
+    }
+
+    20% {
+        transform: translate(-120px, 0);
+
+    }
+
+    40% {
+        transform: translate(-120px, -70px);
+
+    }
+
+    60% {
+        transform: translate(50px, -70px);
+
+    }
+
+    80% {
+        transform: translate(50px, 0);
+    }
+
+    100% {transform: translate(0, 0);
+    }
+}
+
+
+a.ex-13-button:hover .ex-13-top-white {
+   
+    animation: turn1 2s;
+    animation-timing-function: linear;
+
+}
+
+a.ex-13-button:hover .ex-13-bottom-white {
+   
+    animation: turn2 2s;
+    animation-direction: inherit;
+    animation-timing-function: linear;
+}
